@@ -1,10 +1,10 @@
 # Leraning_Website
 
-A frontend skeleton for a programming learning platform inspired by Khan Academy and Udemy. Cosmic theme, animated backgrounds, and interactive-first design.
+This is the frontend for the university project.
 
-Run locally:
-
+Development
 1. npm install
 2. npm run dev
 
-Open http://localhost:5173
+Branches
+- feature/all-updates (contains a full update baseline: components, lesson schema, editor, quiz, CI)

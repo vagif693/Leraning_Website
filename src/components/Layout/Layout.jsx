@@ -1,8 +1,8 @@
-import React from 'react'
-import Header from '../Header/Header'
-import CosmicBackground from '../CosmicBackground/CosmicBackground'
+import React from 'react';
+import Header from '../Header/Header.jsx';
+import CosmicBackground from '../CosmicBackground/CosmicBackground.jsx';
 
-export default function Layout({children}){
+export default function Layout({ children }) {
   return (
     <>
       <CosmicBackground />
@@ -11,5 +11,5 @@ export default function Layout({children}){
         <main>{children}</main>
       </div>
     </>
-  )
+  );
 }

@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import lessons from '../../data/lessons/index.js';
 
 export default function Courses(){
   return (
     <section>
       <h1>All Courses</h1>
-      <div className="grid" style={{marginTop:14}}>
-        {Array.from({length:8}).map((_,i)=> (
-          <div key={i} className="card">
-            <div style={{fontWeight:800}}>Course Title {i+1}</div>
-            <div style={{color:'var(--muted)'}}>Short course description that entices students.</div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16,marginTop:12}}>
+        {lessons.map((l)=> (
+          <div key={l.id} style={{background:'var(--card)',padding:16,borderRadius:12}}>
+            <div style={{fontWeight:800}}>{l.title}</div>
+            <div style={{color:'var(--muted)'}}>{l.description}</div>
           </div>
         ))}
       </div>

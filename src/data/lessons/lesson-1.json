@@ -1,0 +1,1 @@
+{"id":"lesson-1","title":"Intro to HTML","description":"Basics of HTML","content":"<p>Learn HTML basics.</p>","exampleHtml":"<!doctype html><html><body><h1>Hello</h1></body></html>","quiz":[{"id":"q1","text":"What tag is for a paragraph?","options":["<p>","<div>","<span>"],"answer":"<p>"}]}

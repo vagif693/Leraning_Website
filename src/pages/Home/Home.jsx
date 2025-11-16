@@ -1,48 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
   return (
     <section>
-      <div className="hero">
-        <div style={{flex:1}}
-          <h1 className="title">Master programming with interactive lessons</h1>
-          <p className="lead">A collaborative learning experience inspired by Khan Academy and Udemy — interactive exercises, curated courses, and community projects.</p>
-          <Link to="/courses" className="cta">Browse Courses</Link>
-        </div>
-        <div className="hero-card" style={{width:420}}>
-          <h3 style={{marginTop:0}}>Featured Course</h3>
-          <div style={{display:'flex',alignItems:'center',gap:12}}>
-            <div style={{width:64,height:64,borderRadius:10,background:'linear-gradient(90deg,var(--accent-1),var(--accent-2))'}}/>
-            <div>
-              <div style={{fontWeight:700}}>Full-Stack JS Project</div>
-              <div style={{color:'var(--muted)'}}>Build real apps with React, Node and Deploy</div>
-            </div>
-          </div>
-          <div className="grid" style={{marginTop:16}}>
-            <div className="card">Interactive editor • Quizzes</div>
-            <div className="card">Project-based</div>
-            <div className="card">Certificates</div>
-          </div>
+      <div style={{display:'flex',gap:24,alignItems:'center',padding:'48px 0'}}>
+        <div style={{flex:1}}>
+          <h1 style={{fontSize:40,margin:0}}>Learn programming with interactive lessons</h1>
+          <p style={{color:'var(--muted)'}}>Interactive editor, quizzes and projects — built for learners.</p>
+          <Link to="/courses" style={{display:'inline-block',marginTop:12,padding:'10px 18px',borderRadius:10,background:'linear-gradient(90deg,var(--accent-1),var(--accent-2))',color:'#fff',textDecoration:'none'}}>Browse Courses</Link>
         </div>
       </div>
-
-      <section style={{marginTop:28}}>
-        <h2 style={{marginBottom:12}}>Popular Courses</h2>
-        <div className="grid">
+      <section>
+        <h2>Popular Courses</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16}}>
           {[1,2,3,4].map(i=> (
-            <article key={i} className="card">
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <div style={{fontWeight:800}}>Course {i}</div>
-                <div className="course-badge">Beginner</div>
-              </div>
-              <p style={{color:'var(--muted)'}}>Short description of the course and learning outcomes.</p>
+            <article key={i} style={{background:'var(--card)',padding:16,borderRadius:12}}>
+              <div style={{fontWeight:700}}>Course {i}</div>
+              <p style={{color:'var(--muted)'}}>Short description.</p>
             </article>
           ))}
         </div>
       </section>
-
-      <footer className="footer">© {new Date().getFullYear()} Leraning Website — crafted with cosmic vibes</footer>
     </section>
   )
 }
