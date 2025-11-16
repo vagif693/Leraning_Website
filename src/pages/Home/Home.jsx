@@ -5,7 +5,7 @@ export default function Home(){
   return (
     <section>
       <div className="hero">
-        <div style={{flex:1}}>
+        <div style={{flex:1}}
           <h1 className="title">Master programming with interactive lessons</h1>
           <p className="lead">A collaborative learning experience inspired by Khan Academy and Udemy — interactive exercises, curated courses, and community projects.</p>
           <Link to="/courses" className="cta">Browse Courses</Link>
